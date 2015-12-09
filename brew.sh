@@ -102,59 +102,54 @@ brew install webkit2png
 brew install zopfli
 brew install youtube-dl
 brew install weechat --with-aspell --with-curl --with-python --with-perl --with-ruby --with-lua --with-guile
+brew install jrnl
 
-
+# Install Applications
 brew install caskroom/cask/brew-cask
+brew cask install --appdir="/Applications" launchbar
+brew cask install --appdir="/Applications" dropbox
+brew cask install --appdir="/Applications" google-chrome
+brew cask install --appdir="/Applications" transmit
+brew cask install --appdir="/Applications" firefox
+brew cask install --appdir="/Applications" hazel
+brew cask install --appdir="/Applications" flash
+brew cask install --appdir="/Applications" iterm2
+brew cask install --appdir="/Applications" sublime-text3
+brew cask install --appdir="/Applications" vlc
+brew cask install --appdir="/Applications" nvalt
+brew cask install --appdir="/Applications" quicklook-json
+brew cask install --appdir="/Applications" skype
+brew cask install --appdir="/Applications" transmission
+brew cask install --appdir="/Applications" cornerstone
+brew cask install --appdir="/Applications" karabiner
+brew cask install --appdir="/Applications" seil
+brew cask install --appdir="/Applications" chatology
+brew cask install --appdir="/Applications" calibre
+brew cask install --appdir="/Applications" openemu
+brew cask install --appdir="/Applications" textexpander
+brew cask install --appdir="/Applications" audio-hijack-pro
+brew cask install --appdir="/Applications" controlplane
+brew cask install --appdir="/Applications" omniplan
+brew cask install --appdir="/Applications" the-unarchiver
+brew cask install --appdir="/Applications" steam
+brew cask install --appdir="/Applications" handbrake
+brew cask install --appdir="/Applications" handbrakecli
+brew cask install --appdir="/Applications" adobe-creative-cloud
+brew cask install --appdir="/Applications" google-hangouts
+brew cask install --appdir="/Applications" daisydisk
+brew cask install --appdir="/Applications" omnifocus
+brew cask install --appdir="/Applications" textmate
+brew cask install --appdir="/Applications" hammerspoon
+brew cask install --appdir="/Applications" devonthink-pro-office
+brew cask install --appdir="/Applications" dayone-cli
+brew cask install --appdir="/Applications" sequel-pro
+brew cask install --appdir="/Applications" flux
 
-apps=(
-  launchbar
-  dropbox
-  google-chrome
-  transmit
-  firefox
-  hazel
-  flash
-  iterm2
-  sublime-text3
-  vlc
-  nvalt
-  quicklook-json
-  skype
-  transmission
-  cornerstone
-  karabiner
-  seil
-  chatology
-  calibre
-  mjolnir
-  openemu
-  textexpander
-  audio-hijack-pro
-  controlplane
-  omniplan
-  the-unarchiver
-  steam
-  handbrake
-  handbrakecli
-  adobe-creative-cloud
-  google-hangouts
-  daisydisk
-  omnifocus
-  textmate
-  hammerspoon
-)
-
-# Install apps to /Applications
-brew cask install --appdir="/Applications" ${apps[@]}
-
-brew tap caskroom/fonts
-fonts=(
-  font-source-code-pro
-  font-roboto
-)
 
 # install fonts
-brew cask install ${fonts[@]}
+brew tap caskroom/fonts
+brew cask install font-source-code-pro
+brew cask install font-roboto
 
 # Remove outdated versions from the cellar.
 brew cleanup
