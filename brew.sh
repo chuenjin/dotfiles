@@ -38,8 +38,8 @@ brew install wget --with-iri
 # Install RingoJS and Narwhal.
 # Note that the order in which these are installed is important;
 # see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
+# brew install ringojs
+# brew install narwhal
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
@@ -55,30 +55,30 @@ brew install sfnt2woff-zopfli
 brew install woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install aircrack-ng
-brew install bfg
-brew install binutils
-brew install binwalk
-brew install cifer
-brew install dex2jar
-brew install dns2tcp
-brew install fcrackzip
-brew install foremost
-brew install hashpump
-brew install hydra
-brew install john
-brew install knock
-brew install netpbm
+# brew install aircrack-ng
+# brew install bfg
+# brew install binutils
+# brew install binwalk
+# brew install cifer
+# brew install dex2jar
+# brew install dns2tcp
+# brew install fcrackzip
+# brew install foremost
+# brew install hashpump
+# brew install hydra
+# brew install john
+# brew install knock
+# brew install netpbm
 brew install nmap
-brew install pngcheck
-brew install socat
-brew install sqlmap
-brew install tcpflow
-brew install tcpreplay
-brew install tcptrace
-brew install ucspi-tcp # `tcpserver` etc.
-brew install xpdf
-brew install xz
+# brew install pngcheck
+# brew install socat
+# brew install sqlmap
+# brew install tcpflow
+# brew install tcpreplay
+# brew install tcptrace
+# brew install ucspi-tcp # `tcpserver` etc.
+# brew install xpdf
+# brew install xz
 
 # Install other useful binaries.
 brew install ack
@@ -86,8 +86,9 @@ brew install ack
 brew install git
 brew install git-lfs
 brew install imagemagick --with-webp
+brew install links
 brew install lua
-brew install lynx
+# brew install luarocks
 brew install p7zip
 brew install pigz
 brew install pv
@@ -98,6 +99,61 @@ brew install ssh-copy-id
 brew install tree
 brew install webkit2png
 brew install zopfli
+brew install youtube-dl
+brew install weechat --with-aspell --with-curl --with-python --with-perl --with-ruby --with-lua --with-guile
+
+
+brew install caskroom/cask/brew-cask
+
+apps=(
+  launchbar
+  dropbox
+  google-chrome
+  transmit
+  firefox
+  hazel
+  flash
+  iterm2
+  sublime-text3
+  vlc
+  nvalt
+  quicklook-json
+  skype
+  transmission
+  cornerstone
+  karabiner
+  seil
+  chatology
+  calibre
+  mjolnir
+  openemu
+  textexpander
+  audio-hijack-pro
+  controlplane
+  omniplan
+  the-unarchiver
+  steam
+  handbrake
+  handbrakecli
+  adobe-creative-cloud
+  google-hangouts
+  daisydisk
+  omnifocus
+  textmate
+  hammerspoon
+)
+
+# Install apps to /Applications
+brew cask install --appdir="/Applications" ${apps[@]}
+
+brew tap caskroom/fonts
+fonts=(
+  font-source-code-pro
+  font-roboto
+)
+
+# install fonts
+brew cask install ${fonts[@]}
 
 # Remove outdated versions from the cellar.
 brew cleanup
