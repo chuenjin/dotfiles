@@ -144,6 +144,7 @@ brew cask install --appdir="/Applications" devonthink-pro-office
 brew cask install --appdir="/Applications" dayone-cli
 brew cask install --appdir="/Applications" sequel-pro
 brew cask install --appdir="/Applications" flux
+brew cask install --appdir="/Applications" adium
 
 
 # install fonts
